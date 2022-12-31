@@ -1,0 +1,105 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+#main{
+	position: absolute;
+	margin: auto;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	border: 0.1vmin solid black;
+	height: 98vmin;
+	width: 98vmin;
+
+}
+
+
+
+#side{
+	position: absolute;
+	top: 1vmin;
+	left: 1vmin;
+	height: 25vmin;
+	width: 35vmin;
+	border: 0.2vmin solid black;
+	text-align: center;
+	font-size: 3.5vmin;
+}
+
+#cubeOuter{
+	height: 8vmin;
+	width: 8vmin;
+	perspective: 30vmin;
+	margin: auto;
+}
+
+#cubeInner{
+	height: 8vmin;
+	width: 8vmin;	
+	position: absolute;
+	transform-style: preserve-3d;
+	transition: all 0.75s linear;
+}
+
+#cubeInner div{
+	width: 8vmin;
+	height: 8vmin;
+	position: absolute;
+}
+
+#side p{
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+
+#front{
+	transform: translateZ(4vmin);
+}
+
+#back{
+	transform: rotateY(180deg) translateZ(4vmin);
+}
+
+#left{
+	transform: rotateY(-90deg) translateX(-4vmin);
+	transform-origin: left;
+}
+
+#right{
+	transform: rotateY(90deg) translateX(4vmin);
+	transform-origin: right;
+}
+
+#top{
+	transform: rotateX(-90deg) translateY(-4vmin);
+	transform-origin: top;
+}
+
+#bottom{
+	transform: rotateX(90deg) translateY(4vmin);
+	transform-origin: bottom;
+}
+
+img{
+	height: 100.3%;
+	width: 100.3%;
+}
+
+.players{
+	position: absolute;
+	top: 90.9vmin;
+	left: 3vmin;
+	height: 4vmin;
+	width: 4vmin;
+	border: 0.1vmin solid black;
+	border-radius: 50%;
+	opacity: 0.7;
+	transition-duration: 0.4s;
+	transition-property: margin;
+}
+
+.players:nth-child(1){background-color: red;}
+.players:nth-child(2){background-color: blue;}
